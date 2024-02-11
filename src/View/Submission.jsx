@@ -30,7 +30,7 @@ const SubmissionPage = () => {
       const newData = JSON.parse(data);
       if (newData.log === "Done") {
         setStatus((prev) => ({ ...prev, status: "Done" }));
-        newSocket.emit("taskEnded", "taskEnded");
+        newSocket.emit("taskEnd", "taskEnded");
       }
     });
 
@@ -129,7 +129,10 @@ const SubmissionPage = () => {
           >
             <div style={{ color: "#eee" }}>
               Showing logs for :{" "}
-              <Link to={status.url} style={{ color: "#eee" }}> {status.projectSlug}</Link>
+              <Link to={status.url} style={{ color: "#eee" }}>
+                {" "}
+                {status.projectSlug}
+              </Link>
             </div>
             <div style={{ color: "#eee" }}>
               Status :{" "}
