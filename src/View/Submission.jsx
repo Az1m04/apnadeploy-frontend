@@ -129,7 +129,7 @@ const SubmissionPage = () => {
           >
             <div style={{ color: "#eee" }}>
               Showing logs for :{" "}
-              <Link to={status.url}> {status.projectSlug}</Link>
+              <Link to={status.url} style={{ color: "#eee" }}> {status.projectSlug}</Link>
             </div>
             <div style={{ color: "#eee" }}>
               Status :{" "}
@@ -139,7 +139,6 @@ const SubmissionPage = () => {
             </div>
           </div>
           <div className="log-container">
-            sdd
             {logs.length > 0 &&
               logs?.map((log, index) => (
                 <div key={index} className="log-line">
